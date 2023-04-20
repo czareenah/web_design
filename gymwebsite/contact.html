@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div class="contactsgrid">
+<div class="contactsheader">
+    <img src="gympics/kettlebell-gd215be109_1920.jpeg" alt="gyms ireland">
+    <div class="contactus">
+        <h1>Contact Us!</h1>
+    </div>
+</div>
+</div>
+
+
+<div class="contactswrapper">
+<br>
+<br>
+<div class="dublincontact">
+    <h1>Dublin</h1>
+    <p>32 O'Driscoll Terrace,</p>
+    <p>Dublin 6, Ireland</p>
+    <p>+353898888888</p>
+    <p>dublin@pumpfiction.com</p>
+</div>
+<br>
+<br>
+
+<div class="corkcontact">
+    <h1> Cork </h1>
+        <p>18 Ringrose Street, Cork City, Ireland</p>
+        <p>+3533892222222</p>
+        <p>cork@pumpfiction.com</p>
+</div>
+<br>
+<br>
+<div class="galwaycontact">
+    <h1> Galway </h1>
+        <p>14 Healy Road, Galway City, Ireland</p>
+        <p>+353893333333</p>
+        <p>galway@pumpfiction</p>
+</div>
+<br>
+<br>
+<div class="limerickcontact">
+    <h1>Limerick</h1>
+        <p>21 Ryan Avenue, Limerick City, Ireland</p>
+        <p>+353895555555</p>
+        <p>limerick@pumpfiction</p>  
+</div>
+<br>
+<br>
+<div class="clarecontact">
+    <h1>Clare</h1>
+        <p>7 O'Brien's Terrace, Ennis, Co. Clare, Ireland</p>
+        <p>+353894444444</p>
+        <p>clare@pumpfiction</p>  
+</div>
+<br>
+<br>
+<div class="wexfordcontact">
+    <h1>Wexford</h1>
+        <p>Sexton Lane, Wexford Town, Ireland</p>
+        <p>+353896666666</p>
+        <p>wexford@pumpfiction</p> 
+</div>
+</div>
+
+
+<div class="message">
+    <h1> Send us a message!</h1>
+    <form>
+    <input type="text" class="input" placeholder="First Name">
+    <input type="text" class="input" placeholder="Last Name">
+    <input type="text" class="input" placeholder="phonenumber">
+    <input type="text" class="input" placeholder="email address">
+    <input type="text" class="input" placeholder="Subject">
+    <textarea type="text" class="message-field" placeholder="Your message..."></textarea>
+    <!-- call the pop up by calling the function messageSent()-->
+    <button type="button" class="button" onclick="messageSent()">submit</button>
+    </div>
+    </form>
+</div>
+
+
+<div class="pop-up" id="messageSentPopUp">
+    <p> Thank you! Your message has been sent</p>
+    <button type="button" onclick="closePopup()">Ok</button>
+</div>
+
+<!-- footer -->
+<footer id="footer">
+    <div class="aboutUsFooter">
+        
+        <H2>About Us</H2>
+    </div>
+    <div class="aboutUsFooter">
+        <h2>Products</h2>
+    </div>
+    <div class="aboutUsFooter">
+        <a href="file:///Users/conallmcgrath/gymwebsite/locations.html">
+        <h2>Locations</h2>
+        </a>
+    </div>
+    <div class="aboutUsFooter">
+        <a href="file:///Users/conallmcgrath/gymwebsite/contact.html">   
+        <h2>Contact</h2>
+        </a>
+    </div>
+    
+</footer>
+
+
+
+
+
+<!-- Javascript-->
+
+
+<!-- define the functions messageSent -->
+
+<!-- define the variable, then get the Id from the document (the code above) -->
+<!-- define the functions closePopup -->
+
+<script type="text/javascript">
+let popUp = document.getElementById("messageSentPopUp");
+
+    function messageSent(){
+        popUp.classList.add("open-PopUp");
+    }
+    function closePopup(){
+        popUp.classList.remove("open-PopUp");
+    }
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+
