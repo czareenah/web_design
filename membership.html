@@ -8,6 +8,75 @@
 </head>
 
 <style>
+  body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0;
+  background-color: #000;
+  height: 10px;
+
+}
+a {
+  text-decoration: none;
+  color: #fffdfd;
+}
+.site-header { 
+  border-bottom: .5px solid #000000;
+  padding: .5em 1em;
+}
+
+.site-header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.site-identity {
+  float: right;
+}
+
+#Pumpfiction-Logo {
+  max-width: 10%;
+  max-height: .5%;
+  top: 2%;
+  float: right;
+  left: -7%;
+  margin: 0 50px 0 0;
+}
+
+.site-navigation {
+  float: left;
+  left: 30px;
+  top: 50%;
+}
+
+.site-navigation ul, li {
+  margin: 0; 
+  padding: 5px;
+}
+
+.site-navigation li {
+  display: inline-block;
+  margin: 1.4em 1em 1em 1em;
+  margin-top: 30px;
+}</style>
+ 
+  <header class="site-header">
+      <div class="site-identity">
+          <a href="homepage.html"></a>
+          <video autoplay muted loop id="Pumpfiction-Logo">
+              <source src="/stock_images/Pf-animated-logo.mp4" type="video/mp4">
+              </video>
+      </div>  
+      <nav class="site-navigation">
+        <ul class="nav">
+          <li><a href="#">About</a></li> 
+          <li><a href="#">News</a></li> 
+          <li><a href="#">Contact</a></li> 
+        </ul>
+      </nav>
+    </header>
+
+<style>
     body, html {
       height: 100%;
       margin: 0;
