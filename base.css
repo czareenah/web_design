@@ -1,0 +1,202 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    background-color: #000;
+    height: 10px;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #fffdfd;
+}
+
+.site-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-navigation ul,
+li {
+    margin: 0;
+    padding: 5px;
+}
+
+.site-navigation li {
+    display: inline-block;
+    margin: 1.4em 1em 1em 1em;
+}
+
+
+#Pumpfiction-Logo {
+    max-width: 12%;
+    max-height: 5%;
+    top: 20px;
+    float: right;
+    left: -7%;
+    margin: 0 50px 0 0;
+}
+
+#Pumpfiction-Video {
+    top: 100%;
+    left: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    z-index: 100;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.063), rgba(0, 0, 0, 0.129)), url("./stock_images/membership.webp");
+    height: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    opacity: 0.8;
+}
+
+.hero-text button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: black;
+    background-color: #ddd;
+    text-align: center;
+    cursor: pointer;
+}
+
+.hero-text button:hover {
+    background-color: #555;
+    color: white;
+}
+
+.hero-text1 {
+    position: absolute;
+    text-align: right;
+    top: 50%;
+    left: 50%;
+    transform: translate(-15%, -50%);
+    color: white;
+    opacity: 0.8;
+}
+
+.hero-text1 button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: black;
+    background-color: #ddd;
+    text-align: right;
+    cursor: pointer;
+}
+
+.hero-text1 button:hover {
+    background-color: #555;
+    color: white;
+}
+
+.membership1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.353), rgba(0, 0, 0, 0.129)), url("./stock_images/membership2.jpeg");
+    height: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.membership2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.353), rgba(0, 0, 0, 0.129)), url("./stock_images/membership3.webp");
+    height: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text2 {
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    transform: translate(1%, -50%);
+    color: white;
+    opacity: 0.8;
+}
+
+.hero-text2 button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: black;
+    background-color: #ddd;
+    text-align: left;
+    cursor: pointer;
+}
+
+.hero-text2 button:hover {
+    background-color: #555;
+    color: white;
+}
+
+.membership3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.557), rgba(0, 0, 0, 0.129)), url("./stock_images/membership4.jpeg");
+    height: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text3 {
+    text-align: right;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-15%, -50%);
+    color: white;
+    opacity: 0.9;
+}
+
+.hero-text3 button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: black;
+    background-color: #ddd;
+    text-align: left;
+    cursor: pointer;
+}
+
+.hero-text3 button:hover {
+    background-color: #555;
+    color: white;
+}
