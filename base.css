@@ -200,3 +200,419 @@ li {
     background-color: #555;
     color: white;
 }
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+
+}
+
+/* styling for the footer */
+
+#footer {
+    background-color: #e0ebeb;
+    position: relative;
+    height: 100px;
+    margin-top: -130px;
+    clear:both;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "About Product Locations Contact";
+    padding-left: 170px;
+    justify-content: center;
+    padding-top: 50px;
+    
+}
+.aboutUsFooter{
+    border-radius: 20px;
+    max-width: fit-content;
+    max-height: 40px;
+    justify-content: center;
+    padding-top: 10px;
+    transition: all 0.4s;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    color: white;
+}
+.aboutUsFooter:hover{
+    transform: scale(1.2);
+}
+.aboutUsFooter a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+/* styling for locations page */
+
+#grid {
+    display: grid;
+    grid-template-columns: 1fr 1 frr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "containertop containertop containertop"
+    "DublinImagecontainer Cork Galway"
+    "Limerick Clare Wexford";
+    grid-gap: 10px;
+}
+.containertop {
+    grid-area: containertop;
+}
+
+.containertop Img {
+    width: 100%;
+    height: 600px;
+    background-size: conatin;
+    
+}
+
+.header {
+    position: absolute;
+    top: 450px;
+    left: 40%;
+    color: white;
+    padding: 10px;
+    font-size: large;
+}
+
+.overlapwriting {
+    position: absolute;
+    width: 212.07px;
+    height: 346.42px;
+    line-height: 2.0;
+    color: white;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size:medium;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: fit-content;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.DublinImagecontainer {
+    grid-area: DublinImagecontainer;
+    padding-left: 40px;
+    width: 350px;
+    height: 400px; 
+    background-color: orange;
+    border: 30px;
+    padding: 15px;
+    color: white;
+    outline: 2px solid black;
+    margin-left: 50px;
+    position:sticky;
+    margin-top: 50px;
+    box-shadow: 10px 10px 30px black; 
+}
+
+.DublinImagecontainer Img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Cork {
+    grid-area: Cork;
+    width: 350px;
+    height: 400px; 
+    background-color: orange;
+    border: 30px;
+    padding: 15px;
+    color: white;
+    outline: 2px solid black;
+    margin-left: 50px;
+    margin-top: 50px;
+    position: sticky;
+    box-shadow: 10px 10px 30px black;
+}
+.Cork Img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.Galway {
+    grid-area: Galway;
+    width: 350px;
+    height: 400px; 
+    background-color: orange;
+    border: 30px;
+    padding: 15px;
+    color: white;
+    outline: 2px solid black;
+    margin-left: 50px;
+    margin-top: 50px;
+    position: sticky;
+    box-shadow: 10px 10px 30px black;
+}
+
+.Galway Img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.Limerick {
+    grid-area: Limerick;
+    width: 350px;
+    height: 400px; 
+    background-color: orange;
+    border: 30px;
+    padding: 15px;
+    color: white;
+    outline: 2px solid black;
+    margin-left: 50px;
+    position: sticky;
+    box-shadow: 10px 10px 30px black;
+}
+.Limerick Img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.Clare {
+    grid-area: Clare;
+    width: 350px;
+    height: 400px; 
+    background-color: orange;
+    border: 30px;
+    padding: 15px;
+    color: white;
+    outline: 2px solid black;
+    margin-left: 50px;
+    position: sticky;
+    box-shadow: 10px 10px 30px black;
+}
+.Clare Img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.Wexford {
+    grid-area: Wexford;
+    width: 350px;
+    height: 400px; 
+    background-color: orange;
+    border: 30px;
+    padding: 15px;
+    color: white;
+    outline: 2px solid black;
+    margin-left: 50px;
+    position: sticky;
+    box-shadow: 10px 10px 30px black;
+}
+.Wexford Img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 600px){
+    #grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "containertop containertop containertop"
+        "DublinImagecontainer DublinImagecontainer DublinImagecontainer"
+        "Cork Cork Cork" 
+        "Galway Galway Galway"
+        "Limerick Limerick Limerick"
+        "Clare Clare Clare"
+        "Wexford Wexford Wexford"; 
+    }
+    #footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 20px;
+        grid-template-areas: 
+        "About" 
+        "Product" 
+        "Locations" 
+        "Contact";
+        /* I think I can put a gap bewtewwn these when it's at this max-width */
+        height: 210px;
+        margin-top: 100px;
+        
+        }
+    }
+
+@media screen and (min-width: 601px) and (max-width: 1093px){
+    #grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "containertop containertop containertop"
+        "DublinImagecontainer Cork Galway"
+        "Limerick Clare Wexford"; 
+    }
+    #grid div{
+        width: 75%;
+        
+    }
+    #footer {
+        margin-top: 100px;
+    }
+    .containertop Img{
+        width: 135%;
+    }
+}
+
+/* styling for contacts page */
+
+/* make a css grid for this page so that it will be responsive as well */
+
+#contactsgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    " contactsheader contactsheader"
+    "contactswrapper message";
+}
+
+@media screen and (max-width: 600px){
+    #contactsgrid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "contactsheader"
+    "contactswrapper"
+    "message";
+    gap: 20px;
+}
+    .message {
+        margin-bottom: 520px;
+    }
+} 
+@media screen and (max-width: 601px) and (max-width: 100%){
+    #contactsgrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        " contactsheader contactsheader"
+        "contactswrapper message";
+    }
+
+}
+
+.contactsheader {
+    grid-area: contactsheader;
+    width: 1450px;
+    height: 600px;
+}
+
+.contactsheader Img{
+    display: block;
+    grid-area: contactsheader;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contactus{
+    position: absolute;
+    top: 450px;
+    left: 40%;
+    color: white;
+    padding: 10px;
+    font-size: large;
+}
+
+.contactswrapper{
+    grid-area: contactswrapper;
+    margin-left: 50px;
+    font-size: larger;
+    max-width: 300px;
+    float: left;
+}
+
+.message {
+    grid-area: message;
+    display: grid;
+    width: 400px;
+    height: 60px;
+    margin-top: 200px;
+    justify-self: start;
+}
+
+
+.input {
+    width: 400px;
+    height: 40px;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #777;
+    border-radius: 20px;
+    outline: none;
+}
+
+.message-field{
+margin-top: 20px;
+height: 150px;
+padding-top: 10px;
+width: 420px;
+border-radius: 20px;
+
+}
+
+
+.button {
+    border-radius: 20px;
+    color: #fff;
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    background-color: green;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.pop-up {
+    width: 300px;
+    height: 70px;
+    border-radius: 20px;
+    position: absolute;
+    /* make sure text will be in center of pop up */
+    text-align: center;
+    /* make the visibility hidden */
+    visibility: hidden;
+    /* give it a transition */
+    transition: transform 0.5s, top 0.4s;
+    border: solid black;
+    font: small;
+    margin-left: 120px;
+}
+
+.open-PopUp {
+    visibility: visible;
+}
+.pop-up button {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    
+
+}
+.error {
+    color: red;
+}
