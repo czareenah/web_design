@@ -8,15 +8,13 @@ html, body {
 
 }
 
-
 /* styling for the footer */
-
 
 #footer {
     background-color: #e0ebeb;
     position: relative;
     height: 100px;
-    margin-top: -100px;
+    margin-top: -130px;
     clear:both;
     color: white;
     display: grid;
@@ -25,9 +23,9 @@ html, body {
     padding-left: 170px;
     justify-content: center;
     padding-top: 50px;
+    
 }
 .aboutUsFooter{
-    outline: solid white;
     border-radius: 20px;
     max-width: fit-content;
     max-height: 40px;
@@ -35,9 +33,16 @@ html, body {
     padding-top: 10px;
     transition: all 0.4s;
     cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    color: white;
 }
 .aboutUsFooter:hover{
     transform: scale(1.2);
+}
+.aboutUsFooter a{
+    text-decoration: none;
+    color: white;
 }
 
 
@@ -64,6 +69,7 @@ html, body {
     background-size: conatin;
     
 }
+
 .header {
     position: absolute;
     top: 450px;
@@ -83,7 +89,7 @@ html, body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size:larger;
+    font-size:medium;
     text-align: center;
     box-sizing: border-box;
     display: flex;
@@ -91,6 +97,7 @@ html, body {
     align-items: center;
     flex-direction: column;
     max-width: fit-content;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .DublinImagecontainer {
@@ -115,21 +122,6 @@ html, body {
     object-fit: cover;
 }
 
-
-.Dublin h1 {
-    font-family:Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-.Dublin p {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-}
-.Dublin h2 {
-    font-family:'Times New Roman', Times, serif;
-    text-align: center;
-}
-
-
 .Cork {
     grid-area: Cork;
     width: 350px;
@@ -149,19 +141,6 @@ html, body {
     height: 100%;
     object-fit: cover;
 }
-.Cork h1 {
-    font-family:Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-.Cork p {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-}
-.Cork h2 {
-    font-family:'Times New Roman', Times, serif;
-    text-align: center;
-}
-
 .Galway {
     grid-area: Galway;
     width: 350px;
@@ -182,19 +161,6 @@ html, body {
     height: 100%;
     object-fit: cover;
 }
-.Galway h1 {
-    font-family:Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-.Galway p {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-}
-.Galway h2 {
-    font-family:'Times New Roman', Times, serif;
-    text-align: center;
-}
-
 .Limerick {
     grid-area: Limerick;
     width: 350px;
@@ -213,19 +179,6 @@ html, body {
     height: 100%;
     object-fit: cover;
 }
-.Limerick h1 {
-    font-family:Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-.Limerick p {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-}
-.Limerick h2 {
-    font-family:'Times New Roman', Times, serif;
-    text-align: center;
-}
-
 .Clare {
     grid-area: Clare;
     width: 350px;
@@ -244,19 +197,6 @@ html, body {
     height: 100%;
     object-fit: cover;
 }
-.Clare h1 {
-    font-family:Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-.Clare p {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-}
-.Clare h2 {
-    font-family:'Times New Roman', Times, serif;
-    text-align: center;
-}
-
 .Wexford {
     grid-area: Wexford;
     width: 350px;
@@ -276,43 +216,107 @@ html, body {
     object-fit: cover;
 }
 
-.Wexford h1 {
-    font-family:Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-.Wexford p {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-}
-.Wexford h2 {
-    font-family:'Times New Roman', Times, serif;
-    text-align: center;
-}
-
-@media screen and (min-width: 736px)
-{
-    .grid {
+@media screen and (max-width: 600px){
+    #grid {
         display: grid;
-        grid-template-columns: 1fr 1 frr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "containertop containertop containertop"
+        "DublinImagecontainer DublinImagecontainer DublinImagecontainer"
+        "Cork Cork Cork" 
+        "Galway Galway Galway"
+        "Limerick Limerick Limerick"
+        "Clare Clare Clare"
+        "Wexford Wexford Wexford"; 
+    }
+    #footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 20px;
+        grid-template-areas: 
+        "About" 
+        "Product" 
+        "Locations" 
+        "Contact";
+        /* I think I can put a gap bewtewwn these when it's at this max-width */
+        height: 210px;
+        margin-top: 100px;
+        
+        }
+    }
+
+@media screen and (min-width: 601px) and (max-width: 1093px){
+    #grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
         grid-template-areas: 
         "containertop containertop containertop"
         "DublinImagecontainer Cork Galway"
         "Limerick Clare Wexford"; 
     }
+    #grid div{
+        width: 75%;
+        
+    }
+    #footer {
+        margin-top: 100px;
+    }
+    .containertop Img{
+        width: 135%;
+    }
 }
 
 /* styling for contacts page */
 
+/* make a css grid for this page so that it will be responsive as well */
 
+#contactsgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    " contactsheader contactsheader"
+    "contactswrapper message";
+}
+
+@media screen and (max-width: 600px){
+    #contactsgrid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "contactsheader"
+    "contactswrapper"
+    "message";
+    gap: 20px;
+}
+    .message {
+        margin-bottom: 520px;
+    }
+} 
+@media screen and (max-width: 601px) and (max-width: 100%){
+    #contactsgrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        " contactsheader contactsheader"
+        "contactswrapper message";
+    }
+
+}
 
 .contactsheader {
-    
-    width: 100%;
+    grid-area: contactsheader;
+    width: 1450px;
     height: 600px;
 }
 
 .contactsheader Img{
+    display: block;
+    grid-area: contactsheader;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -328,22 +332,20 @@ html, body {
 }
 
 .contactswrapper{
-    
+    grid-area: contactswrapper;
     margin-left: 50px;
     font-size: larger;
     max-width: 300px;
     float: left;
-    
 }
 
 .message {
-    margin-top: 30%;
-    position: absolute;
+    grid-area: message;
+    display: grid;
     width: 400px;
     height: 60px;
     margin-top: 200px;
-    padding-left: 700px;
-    padding-right: 10px;
+    justify-self: start;
 }
 
 
@@ -379,31 +381,25 @@ border-radius: 20px;
     border: none;
     cursor: pointer;
 }
-
-
 .pop-up {
     width: 300px;
     height: 70px;
     border-radius: 20px;
     position: absolute;
-    
     /* make sure text will be in center of pop up */
     text-align: center;
-    /* ad space in the pop up */
-    margin-left: 820px;
-    margin-top: 750px;
+    /* make the visibility hidden */
     visibility: hidden;
+    /* give it a transition */
     transition: transform 0.5s, top 0.4s;
     border: solid black;
     font: small;
+    margin-left: 120px;
 }
 
 .open-PopUp {
     visibility: visible;
-    
-
 }
-
 .pop-up button {
     width: 50px;
     height: 50px;
@@ -413,9 +409,6 @@ border-radius: 20px;
     
 
 }
-
-/* styling for the blur */
-
-#blur-section{
-    filter: blur(5px); 
+.error {
+    color: red;
 }

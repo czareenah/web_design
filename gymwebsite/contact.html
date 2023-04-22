@@ -7,16 +7,13 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-
-<div class="contactsgrid">
+<div id="contactsgrid">
 <div class="contactsheader">
     <img src="gympics/kettlebell-gd215be109_1920.jpeg" alt="gyms ireland">
     <div class="contactus">
         <h1>Contact Us!</h1>
     </div>
 </div>
-</div>
-
 
 <div class="contactswrapper">
 <br>
@@ -70,29 +67,34 @@
         <p>wexford@pumpfiction</p> 
 </div>
 </div>
-
-
+<!--form -->
 <div class="message">
     <h1> Send us a message!</h1>
     <form>
-    <input type="text" class="input" placeholder="First Name">
-    <input type="text" class="input" placeholder="Last Name">
-    <input type="text" class="input" placeholder="phonenumber">
-    <input type="text" class="input" placeholder="email address">
-    <input type="text" class="input" placeholder="Subject">
+    <input required type="text" class="input" placeholder="First Name">
+    <!-- create class error for the inputs that contain error message-->
+    <div class="error"></div>
+    <input required type="text" class="input" placeholder="Last Name">
+    <div class="error"></div>
+    <input required type="text" class="input" placeholder="phonenumber">
+    <div class="error"></div>
+    <input required type="text" class="input" placeholder="email address">
+    <div class="error"></div>
+    <input required type="text" class="input" placeholder="Subject">
+    <div class="error"></div>
     <textarea type="text" class="message-field" placeholder="Your message..."></textarea>
-    <!-- call the pop up by calling the function messageSent()-->
-    <button type="button" class="button" onclick="messageSent()">submit</button>
+    <div class="error"></div>
+    <button class="button"> Submit </button>
+    <div class="pop-up" id="messageSentPopUp">
+        <p> Thank you! Your message has been sent</p>
+        <button type="button" onclick="closePopup()">Ok</button>
+    </div>
     </div>
     </form>
 </div>
-
-
-<div class="pop-up" id="messageSentPopUp">
-    <p> Thank you! Your message has been sent</p>
-    <button type="button" onclick="closePopup()">Ok</button>
 </div>
 
+</div>
 <!-- footer -->
 <footer id="footer">
     <div class="aboutUsFooter">
@@ -103,7 +105,7 @@
         <h2>Products</h2>
     </div>
     <div class="aboutUsFooter">
-        <a href="file:///Users/conallmcgrath/gymwebsite/locations.html">
+        <a href="file:///Users/conallmcgrath/gymwebsite/index.html">
         <h2>Locations</h2>
         </a>
     </div>
@@ -112,15 +114,9 @@
         <h2>Contact</h2>
         </a>
     </div>
-    
 </footer>
 
-
-
-
-
 <!-- Javascript-->
-
 
 <!-- define the functions messageSent -->
 
@@ -129,19 +125,60 @@
 
 <script type="text/javascript">
 let popUp = document.getElementById("messageSentPopUp");
+        // make a submitForm variable that references the button in the submit form 
+        // use query selector so that the document can also target the matching element of button in the HTML  
+let submitForm = document.querySelector('button');
 
+    // make a cunction to call the pop up. Use add so that the visibility goes from hidden to visible 
+    // use classList to manipulate the elements in the HTML code 
     function messageSent(){
         popUp.classList.add("open-PopUp");
     }
+    // define a blose pop up function so that when okay is hit, the pop up removed again. 
     function closePopup(){
         popUp.classList.remove("open-PopUp");
     }
 
+
+    // create a variable to submit the form, then ad an event listener that executes when the click is exectued. 
+
+submitForm.addEventListener('click', function(event){
+
+    // get the variables from the form field 
+    // use querySelectorAll to all the input fields and the text area field. 
+    let requiredFields = document.querySelectorAll('input[required], textarea[required]');
+    // set a variable to true to keep track of wherther or not the required field have an input
+    let fieldsValid = true;
+    // go through the index of the required input fields. Add ++ to go through the index. 
+    // make a for loop so that you can go through the array of input fields with an if statement 
+    for (let i =0; i < requiredFields.length; i++){
+        // create the if else statment, the if for the required fields 
+        // use logical NOT operator ! to negate the truth in the if statement, then set the value to false to add the error 
+        if (!requiredFields[i].value){
+            fieldsValid = false;
+            requiredFields[i].classList.add('error');
+            //use nextElementSibling property to target the next element in the form 
+            requiredFields[i].nextElementSibling.textContent = 'Please fill out this field';
+            // make else statement for the if statment 
+        } else {
+            requiredFields[i].classList.remove('error');
+            requiredFields[i].nextElementSibling.textContent = '';
+        }
+    }
+    if (fieldsValid) {
+        messageSent();
+    }
+    // add prevent default to stop the page from reloading 
+    event.preventDefault();
+});
 </script>
 
-
-
-
+<!-- References 
+The css grid was based on the example provided by Dani Krossing in his youtube video: https://www.youtube.com/watch?v=HgwCeNVPlo0
+The code for the footer was based on the example provided by Dani Krossing in his YoutUbe video: https://www.youtube.com/watch?v=qlCIXXhSX6Y&t=329s
+The code for the pop up was based on the examples provided by Kevin Powell in his YoutTube video: https://www.youtube.com/watch?v=s2ThIxm7FyA and Easy Tutorials: https://www.youtube.com/watch?v=fz8bwvn9lA4&t=1589s
+The code for the pop up was based on the example provided by Easy Tutorials https://www.youtube.com/watch?v=AF6vGYIyV8M
+ -->
 
 
 
